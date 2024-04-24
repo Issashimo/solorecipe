@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+    <div class="content">
+        <h1>家にある食材を教えてください</h1>
+        <form action="/register" method="POST">
+            <p>
+                <label><span>食材をひとつ入力してください</span>
+                    <input type="text" name="ingredient" placeholder="食材">
+                </label>
+            </p>
+            <div class="calc_btn">
+                <input type="submit"  value='登録する'>
+            </div>
+        </form>
+    </div>
+
+<div class="box">
+    {% if ingredients %}
+    <p>家にある食材は</p>
+        <h2 class="ingredients">
+            {% for ingredient in ingredients: %}
+            <p>{{ ingredient }}</p>
+            {% endfor %}
+        </h2>
+    {% else %}
+        <h2 class="ingredients">食材を入力してください</h2>
+    {% endif %}
+    </div>
+<form action="/recommend" method="get">
+    <div class="recommend_btn">
+    <input type="submit" value='レシピを見る'>
+    </div>
+</form>
+</main>
+{% endblock %}
