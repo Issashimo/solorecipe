@@ -1,10 +1,84 @@
 {% extends "layout.html" %}
 {% block content %}
+<head>
+    <meta charset="utf-8">
+    <!-- cssファイルの読み込み -->
+    <link rel=stylesheet href="../static/css/style_recommend.css">
+    <title>レシピ提案サイト</title>
+</head>
 <main>
-<h2 class="ingredients">
-    {% for url in recipe: %}
-    <p>{{ url }}</p>
-    {% endfor %}
-</h2>
+    <div class="boxes">
+        <div class="box">
+            <img src={{photo1}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title1}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id1}}>
+                    <input type="hidden" name="photo" value={{photo1}}>
+                    <input type="hidden" name="title" value={{title1}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <img src={{photo2}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title2}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id2}}>
+                    <input type="hidden" name="photo" value={{photo2}}>
+                    <input type="hidden" name="title" value={{title2}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <img src={{photo3}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title3}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id3}}>
+                    <input type="hidden" name="photo" value={{photo3}}>
+                    <input type="hidden" name="title" value={{title3}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <img src={{photo4}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title4}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id4}}>
+                    <input type="hidden" name="photo" value={{photo4}}>
+                    <input type="hidden" name="title" value={{title4}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <img src={{photo5}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title5}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id5}}>
+                    <input type="hidden" name="photo" value={{photo5}}>
+                    <input type="hidden" name="title" value={{title5}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <img src={{photo6}} alt="ロゴ"title="ロゴ" width="150" >
+            <div class="informartion">
+                <h4 style="text-align:center">{{title6}}</h4>
+                <form action="/loading" method="POST">
+                    <input type="hidden" name="Id" value={{Id6}}>
+                    <input type="hidden" name="photo" value={{photo6}}>
+                    <input type="hidden" name="title" value={{title6}}>
+                    <input type="submit" key="a" value="材料を見る">
+                </form>
+            </div>
+        </div>
 </main>
 {% endblock %}

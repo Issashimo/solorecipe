@@ -3,42 +3,114 @@
 }
 
 body {
-  margin: 0;
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  background-color:antiquewhite;
+  background-color:rgb(251, 253, 253);
 }
 
 /* *********************************
 headerの設定
 *********************************** */
 header {
-  height: 60px;
+  height: 120px;
   width: 100%;
-  padding: 0px 15px;
-  background-color: rgba(115, 210, 230);
-  position: fixed;
+  background: linear-gradient(0deg, #8b4513 0%, #8b4513 25%, white 25%, white 100%);
   top: 0;
-  z-index: 10;
   display: flex;
+  flex-direction: column;
+}
+
+.up_header {
+  display: flex;
+  height: 0px;
+}
+
+.down_header {
+  display: flex;
+  justify-content: center
 }
 
 .logo {
-  font-size: 25px;
+  left: 30px;
+  margin-right: auto;
+}
+.greeting {
+  color: #020000;
+  right: 30px;
+  text-decoration: none;
+  line-height: normal;
+  padding: 0 20px;
 }
 
-nav {
-  margin: 0 0 0 auto;
-}
+.member_register {
+  right: 200px;
+  box-sizing: border-box;
+  width: 200x;
+  height: 90px;
+  background-color:#fff;
+  color: #0b0000;
+  padding:.7em;
+  border-right: 3px solid #8b4513;
+  border-left: 3px solid #8b4513;
+  text-align: center;
+	}
 
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .member_register a {
+    color: #000003;
+    font-size: 21px;
+    font-weight: 800;
+    display: block;
+    line-height: normal;
+    padding: 0 20px;
+  }
+
+  .member_login {
+    right: 400px;
+    box-sizing: border-box;
+    width: 200x;
+    height: 90px;
+    background-color:#fff;
+    color: #0b0000;
+    padding:.7em;
+    border-right: 3px solid #8b4513;
+    border-left: 3px solid #8b4513;
+    text-align: center;
+    }
+
+    .member_login a {
+      color: #000003;
+      font-size: 21px;
+      font-weight: 800;
+      display: block;
+      line-height: normal;
+      padding: 0 20px;
+    }
+
+    .Home a {
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: normal;
+      padding: 90px 100px;
+    }
+
+    .Head_register a {
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: normal;
+      padding: 90px 100px;
+    }
+
+    .Head_recommend a {
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: normal;
+      padding: 90px 100px;
+    }
 
 a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   display: block;
   line-height: 60px;
@@ -63,24 +135,25 @@ main {
 	color: #666;
 	padding:.7em;
 	margin: 5px auto;
-	border: 3px solid rgba(115, 210, 230);
+	border: 3px solid #8b4513;
 	border-radius: 15px;
 	}
 
 .content p { /* p要素に背景や角丸を指定 */
 	margin:5px 0 0;
 	padding:10px;
-	background-color: rgb(115, 211, 230);;
+  color: white;
+	background-color: #8b4513;
 	border-radius:8px;
 	font-size:15px;
 	}
 
 .content h1 {
   font-size: 20px;
-  color: #364e96;/* 文字色 */
+  color: black;/* 文字色 */
   padding: 0.5em 0;/* 上下の余白 */
-  border-top: solid 3px #364e96;/* 上線 */
-  border-bottom: solid 3px #364e96;/* 下線 */
+  border-top: solid 3px white;/* 上線 */
+  border-bottom: solid 3px white;/* 下線 */
 }
 
 .content span { /* span要素（質問テキスト）をブロック化し横に並べる */
@@ -97,12 +170,12 @@ main {
   padding: 1px;
   width: 150px;
   font-size: 18px;
-  background-color: rgb(246, 123, 123);
+  background-color: #8b4513;
   border-radius: 50vh;
 }
 
 .click_btn a:hover {
-  background-color: rgb(250, 90, 90);
+  background-color: #8b4513;
 }
 
 /* 「計算する」ボタンのスタイル */
@@ -116,12 +189,12 @@ main {
 	margin:.5em;
 	color:#fff;
   border:1px solid #bbb;
-  background: #c08b9b;
+  background: #8b4513;
 	border-radius: 5px;
 }
 
 .calc_btn [type="submit"]:hover {
-	background: #985267;
+	background: #8b4513;
 	}
 
 
@@ -150,12 +223,11 @@ main {
   text-align: center;
 	font-size: 18px;
 	font-weight:bold;
-	width:100px;
 	padding:4px 10px;
 	margin:.5em;
 	color:#fff;
   border:1px solid #bbb;
-  background: #c08b9b;
+  background: #8b4513;
 	border-radius: 5px;
 }
 
@@ -170,9 +242,9 @@ footer {
   width: 100%; /* 幅いっぱいを指定 */
   height: 50px; /* 高さを指定 */
   display: inline-block;
-  background: rgba(115, 210, 230); /* 背景色を指定 */
+  background: #8b4513; /* 背景色を指定 */
   text-align: center;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 

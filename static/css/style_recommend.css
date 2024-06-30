@@ -1,0 +1,46 @@
+/* *********************************　
+mainの設定
+*********************************** */
+main {
+    .boxes {
+        display: flex;
+        margin: 0px;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .box {
+        width: 40%;
+        background-color:#fff;
+        text-align: center;
+        margin: 0%;
+        display: flex;
+        border: hidden;
+    }
+
+    .information {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    input {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: hidden;
+        color: blue;
+        background-color:#fff;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+
+    h4 {
+        text-align: center;
+        justify-content: center
+    }
+}

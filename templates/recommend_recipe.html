@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <!-- cssファイルの読み込み -->
+    <link rel=stylesheet href="../static/css/recommend_recipe.css">
+    <title>レシピ提案サイト</title>
+</head>
+<main>
+    <div class="title">
+        <h1>
+            {{title}}
+        </h1>
+        <img src={{photo}} alt="ロゴ"title="ロゴ" width="150" >
+    </div>
+    <a href={{url}}> 
+        レシピを見る
+    </a>
+    <div class="boxes">
+        <div class="box">
+            {% for material in material: %}
+            <div class="material_box">
+                <h1>{{material}}</h1>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="box">
+            {% for amount in amount: %}
+            <div class="amount_box">
+                <h1>{{amount}}</h1>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="box">
+            {% for explanation in explanation: %}
+            <div class="explanation_box">
+                <h1>{{explanation}}</h1>
+                <a href=https://www.dalahast.jp/substitute-seasoning-list/> 
+                    参考
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

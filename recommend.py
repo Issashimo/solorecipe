@@ -1,36 +1,47 @@
 def recommender(ingredients):
     import openpyxl
     import alternate
+    import random
 
-    ingredients = alternate.alternate(ingredients)
+    alternates = alternate.alternate(ingredients)
 
-    write_wb = openpyxl.load_workbook("data/recipe.xlsx")
+    ingredients_alt = ingredients
+    for i in alternates:
+        ingredients_alt.append(i)
+
+    write_wb = openpyxl.load_workbook("data/Rakuten_recipe.xlsx")
     write_ws = write_wb["Sheet1"]
-    scores = {}
+    scores = []
 
     for i in range(write_ws.max_row):
+        score_recipe = []
         j = 0
         score = 0
         while True:
-            if write_ws.cell(row=i + 1, column=4 + j).value in ingredients:
+            if write_ws.cell(row=i + 1, column=7 + j).value in ingredients_alt:
                 score += 1
                 j += 1
-            elif write_ws.cell(row=i + 1, column=4 + j).value == None:
+            elif write_ws.cell(row=i + 1, column=7 + j).value == None:
                 break
             else:
                 pass
                 j += 1
 
         try:
-            scores[write_ws.cell(row=i + 1, column=3).value] = score / j
+            score_recipe.append(score / j + 0.01 * j + random.uniform(-0.001, 0.001))
 
         except:
-            scores[write_ws.cell(row=i + 1, column=3).value] = 0
+            score_recipe.append(0)
 
-    scores_sorted = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        score_recipe.append(write_ws.cell(row=i + 1, column=2).value)
+        score_recipe.append(write_ws.cell(row=i + 1, column=3).value)
+        score_recipe.append(write_ws.cell(row=i + 1, column=4).value)
+        scores.append(score_recipe)
+
+    scores_sorted = sorted(scores, reverse=True)
 
     result = []
-    for i in range(5):
+    for i in range(6):
         result.append(scores_sorted[i])
 
     return result

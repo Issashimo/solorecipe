@@ -1,0 +1,27 @@
+main{
+    .boxes {
+        display: flex;
+    }
+
+    .box {
+        margin: 0;
+        border: hidden;
+        height: 10px;
+    }
+
+    a {
+        color: blue;
+        font-size: 21px;
+        font-weight: 800;
+    }
+
+    .explanation_box {
+        box-sizing: border-box;
+        background-color:white;
+        padding:.7em;
+        margin: 5px auto;
+        border: 3px solid black;
+        border-radius: 15px;
+        text-align: center;
+    }
+}
